@@ -15,7 +15,7 @@ public class WinWindow extends JDialog {
         Container contentPane = getContentPane();
         contentPane.setLayout(layout);
 
-        contentPane.add(createLoseLabel(layout));
+        contentPane.add(createWinLabel(layout));
         contentPane.add(createNewGameButton(layout));
         contentPane.add(createExitButton(layout));
 
@@ -24,7 +24,7 @@ public class WinWindow extends JDialog {
         setResizable(false);
         pack();
         setLocationRelativeTo(null);
-        setVisible(true);
+
     }
 
     public void setNewGameListener(ActionListener newGameListener) {
@@ -35,7 +35,7 @@ public class WinWindow extends JDialog {
         this.exitListener = exitListener;
     }
 
-    private JLabel createLoseLabel(GridBagLayout layout) {
+    private JLabel createWinLabel(GridBagLayout layout) {
         JLabel label = new JLabel("You win!");
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.anchor = GridBagConstraints.CENTER;

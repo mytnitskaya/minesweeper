@@ -20,9 +20,9 @@ public class SettingsWindow extends JDialog {
         contentPane.setLayout(layout);
 
         int gridY = 0;
-        contentPane.add(createRadioButton("Novice (10 mines, 9х9)", GameType.NOVICE, layout, gridY++));
-        contentPane.add(createRadioButton("Medium (40 mines, 16х16)", GameType.MEDIUM, layout, gridY++));
-        contentPane.add(createRadioButton("Expert (99 mines, 16х30)", GameType.EXPERT, layout, gridY++));
+        contentPane.add(createRadioButton("Novice (10 mines, 9x9)", GameType.NOVICE, layout, gridY++));
+        contentPane.add(createRadioButton("Medium (40 mines, 16x16)", GameType.MEDIUM, layout, gridY++));
+        contentPane.add(createRadioButton("Expert (99 mines, 16x30)", GameType.EXPERT, layout, gridY++));
 
         contentPane.add(createOkButton(layout));
         contentPane.add(createCloseButton(layout));
@@ -33,7 +33,6 @@ public class SettingsWindow extends JDialog {
         pack();
         setLocationRelativeTo(null);
 
-        setGameType(GameType.NOVICE);
     }
 
     public void setGameType(GameType gameType) {
@@ -79,6 +78,7 @@ public class SettingsWindow extends JDialog {
 
             if (gameTypeListener != null) {
                 gameTypeListener.onGameTypeChanged(gameType);
+
             }
         });
 

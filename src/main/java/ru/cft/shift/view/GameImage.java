@@ -17,6 +17,7 @@ public enum GameImage {
     BOMB("mine.png"),
     TIMER("timer.png"),
     BOMB_ICON("mineImage.png"),
+    MARKED_FALSE("flagFalse.png")
     ;
 
     private final String fileName;
@@ -27,6 +28,8 @@ public enum GameImage {
     }
 
     public synchronized ImageIcon getImageIcon() {
+
+
         if (imageIcon == null) {
             imageIcon = new ImageIcon(ClassLoader.getSystemResource(fileName));
         }
